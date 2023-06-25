@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { ProductComponent } from './products/product/product.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
+import { FavoriteComponent } from './products/favorite/favorite.component';
+import { CartComponent } from './shopping-cart/cart/cart.component';
+import { OrderComponent } from './orders/order/order.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    MainMenuComponent  ],
+    MainMenuComponent,
+    FavoriteComponent,
+    CartComponent,
+    OrderComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
