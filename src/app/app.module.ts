@@ -5,19 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { ProductComponent } from './products/product/product.component';
+import { MainMenuComponent } from './main-menu/main-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent  ],
+    ProductComponent,
+    MainMenuComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: true // !isDevMode(),
+      enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
-      // registrationStrategy: 'registerWhenStable:30000'
+      registrationStrategy: 'registerWhenStable:30000'
     })
   ],
   providers: [],
